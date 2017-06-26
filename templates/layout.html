@@ -10,8 +10,20 @@
     <script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
 </head>
 <body>
-{% block body %}
-{% endblock %}
+    
+<nav class="header navbar navbar-fixed-top">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="#">Ioffe</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
 </body>
 </html>
 
