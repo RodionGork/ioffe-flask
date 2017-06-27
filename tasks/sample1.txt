@@ -1,0 +1,10 @@
+<h1>Sample Task</h1>
+
+<p>If we throw an iron axe into river, it sinks. We know that iron is a metal much heavier than water.
+The same is for golden ring and even aluminium spoon - for even aluminium is too heavy, though
+3 times lighter than iron.</p>
+
+<p>Yet there are metals which may float in water because they are extremely light. Name three of them.</p>
+
+<p><i>Three chemical symbols (e.g. 'Al', 'Fe', 'Au' for Aluminium, Iron and Gold) should be given,
+separated by spaces.</i></p>

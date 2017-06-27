@@ -15,6 +15,7 @@ body {
 
 .header {
     background: #ffff66;
+    border: 0px;
 }
 
 .navbar a {
