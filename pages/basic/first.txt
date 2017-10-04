@@ -1,0 +1,13 @@
+?text basic/first
+
+Let's start with very simple question: what is the name of the star closest to our planet?
+
+Please, enter just a single word below.
+
+?json
+
+{
+    "id": 1001,
+    "type": "input",
+    "answer": "sun"
+}

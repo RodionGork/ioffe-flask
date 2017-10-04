@@ -1,0 +1,7 @@
+?text _idx
+
+# Problem list
+
+Choose one of the chapters:
+
+[Basic](./basic)
