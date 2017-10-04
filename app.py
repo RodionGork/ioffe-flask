@@ -1,5 +1,6 @@
 import flask
 import os
+import re
 
 app = flask.Flask(__name__, static_folder = 's', template_folder = 't')
 
@@ -14,8 +15,9 @@ def show_task_root():
 
 @app.route('/q/<path:page>')
 def show_task(page):
-    page = os.path.abspath('./pages') + '/' + page
-    if os.path.isdir(page):
+    page = re.sub(r'\/+$', '', page)
+    page = os.path.dirname(os.path.abspath(__file__)) + '/pages/' + page
+     if os.path.isdir(page):
         page += '/_idx'
     page += '.txt'
     if not os.path.isfile(page):
