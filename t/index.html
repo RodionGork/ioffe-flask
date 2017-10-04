@@ -10,8 +10,8 @@
 
     <title>Logo Nav - Start Bootstrap Template</title>
 
-    <link href="s/css/bs.css" rel="stylesheet">
-    <link href="s/css/custom.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bs.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
 
   </head>
 
@@ -51,8 +51,8 @@
       <p>The logo in the navbar is now a default Bootstrap feature in Bootstrap 4! Make sure to set the width and height of the logo within the HTML. For best results, it's recommended that you use an SVG image as your logo.</p>
     </div>
 
-    <script src="s/js/jq.js"></script>
-    <script src="s/js/bs.js"></script>
+    <script src="{{ url_for('static', filename='js/jq.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bs.js') }}"></script>
 
   </body>
 
