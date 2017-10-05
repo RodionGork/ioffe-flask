@@ -1,8 +1,7 @@
 import flask
-import os
-import re
+from core import pages
 
-app = flask.Flask(__name__, static_folder = 's', template_folder = 't')
+app = flask.Flask(__name__, static_folder = 's')
 
 @app.route('/')
 def index():
@@ -15,14 +14,11 @@ def show_task_root():
 
 @app.route('/q/<path:page>')
 def show_task(page):
-    page = re.sub(r'\/+$', '', page)
-    page = os.path.dirname(os.path.abspath(__file__)) + '/pages/' + page
-     if os.path.isdir(page):
-        page += '/_idx'
-    page += '.txt'
-    if not os.path.isfile(page):
-        content = "<h3>Not found: %s</h3>" % page
-    else:
-        with open(page) as f:
-            content = f.read()
+    content = pages.load(page)
+    if content is None:
+        return page_not_found(None)
     return flask.render_template('task.html', body = content)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return flask.render_template('error404.html'), 404
