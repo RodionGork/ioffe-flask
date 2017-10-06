@@ -1,5 +1,7 @@
 ?text basic/first
 
+# The Only Star
+
 Let's start with very simple question: what is the name of the star closest to our planet?
 
 Please, enter just a single word below.

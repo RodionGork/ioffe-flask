@@ -17,7 +17,7 @@ def show_task(page):
     content = pages.load(page)
     if content is None:
         return page_not_found(None)
-    return flask.render_template('task.html', body = content)
+    return flask.render_template('task.html', body = content['text'])
 
 @app.errorhandler(404)
 def page_not_found(e):
